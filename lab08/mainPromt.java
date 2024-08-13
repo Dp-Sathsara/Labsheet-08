@@ -28,6 +28,20 @@ public class mainPromt {
         l1.traverseList();
         System.out.println("");
         l1.displaysalesAmount();
+        
+        System.out.println("");
+        l1.sortBysalesAmount();
+        l1.traverseList();
+
+        System.out.println("");
+        l1.correctQuantity("Frock", 49);
+        l1.traverseList();
+
+        System.out.println("");
+        l1.displaysalesAbove(40000);
+
+        System.out.println("");
+        l1.calculateSales("Electronics");
 
     }
 }

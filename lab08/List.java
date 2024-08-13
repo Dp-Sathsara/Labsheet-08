@@ -95,4 +95,34 @@ public class List {
             }
         }
     }
+    public void correctQuantity(String x,int y){
+        for (int i = 0; i < listSize(); i++) {
+            if (entry[i].productName.trim().equals(x)) {
+                entry[i].QSOFriday=y;
+            }
+        }
+    }
+    public void displaysalesAbove(double amount){
+        System.out.println("Products with Sales Amount above Rs.: " + amount + "/=");
+        for (int i = 0; i < listSize(); i++) {
+            double saleAmount=calculatesalesAmount(entry[i]);
+            if (saleAmount>amount) {
+                System.out.println(entry[i]);
+            }
+        }
+    }
+    public void calculateSales(String x){
+        double total=0;
+        for (int i = 0; i < listSize(); i++) {
+            total+=calculatesalesAmount(entry[i]);
+        }
+        System.out.println("Total Sales Amount for "+x+" Category: Rs. "+total+"/=");
+    }
+    public double calculatetotalsales(){
+        double Total=0;
+        for (int i = 0; i < listSize(); i++) {
+            Total=calculatesalesAmount(entry[i]);
+        }
+        return Total;
+    }
 }
