@@ -24,29 +24,47 @@ public class mainPromt {
         l1.insertLast(p8);
         l1.insertLast(p9);
         l1.insertLast(p10);
+
+        System.out.println("Part (a)---------------------------------------------------------------------------");
         System.out.println("Product ID\tProduct Name\t\t\tCategory\t\tUnitePrice(Rs.)\tQuantity Sold on Friday");
         l1.traverseList();
+
+        System.out.println("");
+        System.out.println("Part (b)----------------------------------------------------------------------------");
         System.out.println("");
         l1.displaysalesAmount();
         
+        System.out.println("");
+        System.out.println("Part (c)----------------------------------------------------------------------------");
         System.out.println("");
         l1.sortBysalesAmount();
         l1.traverseList();
 
         System.out.println("");
+        System.out.println("Part (d)----------------------------------------------------------------------------");
+        System.out.println("");
         l1.correctQuantity("Frock", 49);
         l1.traverseList();
 
+        System.out.println("");
+        System.out.println("Part (e)----------------------------------------------------------------------------");
         System.out.println("");
         l1.displaysalesAbove(40000);
         
 
         //System.out.println("");
         //l1.calculateSales("Electronics");
+        System.out.println("");
+        System.out.println("Part (f)----------------------------------------------------------------------------");
+        System.out.println("");
         double ElectronicsSales=l1.calculateElectonicSales();
         System.out.println("Total Sales Amount for Electronics Category: Rs. "+ElectronicsSales+"/=");
 
+        System.out.println("");
+        System.out.println("Part (g)----------------------------------------------------------------------------");
+        System.out.println("");
         double calculatepercentage=l1.calculateElectronicsalespercentage();
         System.out.println("Percentage of Sales from Electronics: "+calculatepercentage+"%");
+        System.out.println("-------------------------------------------------------------------------------------");
     }
 }
