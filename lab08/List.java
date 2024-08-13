@@ -111,18 +111,32 @@ public class List {
             }
         }
     }
-    public void calculateSales(String x){
+    /*public void calculateSales(String x){
         double total=0;
         for (int i = 0; i < listSize(); i++) {
-            total+=calculatesalesAmount(entry[i]);
+            if (entry[i].category.trim().equals(x)) {
+                total+=calculatesalesAmount(entry[i]);  
+            }
         }
         System.out.println("Total Sales Amount for "+x+" Category: Rs. "+total+"/=");
+    }*/
+    public double calculateElectonicSales(){
+        double total=0;
+        for (int i = 0; i < listSize(); i++) {
+            if (entry[i].category.trim().equals("Electronics")) {
+                total+=calculatesalesAmount(entry[i]);  
+            }
+        }
+        return total;
     }
     public double calculatetotalsales(){
         double Total=0;
         for (int i = 0; i < listSize(); i++) {
-            Total=calculatesalesAmount(entry[i]);
+            Total+=calculatesalesAmount(entry[i]);
         }
         return Total;
+    }
+    public double calculateElectronicsalespercentage(){
+        return(calculateElectonicSales()/calculatetotalsales())*100;
     }
 }

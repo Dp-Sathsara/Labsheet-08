@@ -39,9 +39,14 @@ public class mainPromt {
 
         System.out.println("");
         l1.displaysalesAbove(40000);
+        
 
-        System.out.println("");
-        l1.calculateSales("Electronics");
+        //System.out.println("");
+        //l1.calculateSales("Electronics");
+        double ElectronicsSales=l1.calculateElectonicSales();
+        System.out.println("Total Sales Amount for Electronics Category: Rs. "+ElectronicsSales+"/=");
 
+        double calculatepercentage=l1.calculateElectronicsalespercentage();
+        System.out.println("Percentage of Sales from Electronics: "+calculatepercentage+"%");
     }
 }
