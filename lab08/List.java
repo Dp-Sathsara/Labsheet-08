@@ -111,7 +111,7 @@ public class List {
             }
         }
     }
-    /*public void calculateSales(String x){
+    public void calculateSales(String x){
         double total=0;
         for (int i = 0; i < listSize(); i++) {
             if (entry[i].category.trim().equals(x)) {
@@ -119,7 +119,7 @@ public class List {
             }
         }
         System.out.println("Total Sales Amount for "+x+" Category: Rs. "+total+"/=");
-    }*/
+    }
     public double calculateElectonicSales(){
         double total=0;
         for (int i = 0; i < listSize(); i++) {
