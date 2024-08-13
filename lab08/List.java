@@ -74,4 +74,25 @@ public class List {
             System.out.println(entry[i]);
         }
     }
+    public double calculatesalesAmount(Product x){
+        return(x.unitePrice*x.QSOFriday);
+    }
+    public void displaysalesAmount(){
+        System.out.println("Product ID\tSales Amount(Rs.)");
+        for (int i = 0; i < listSize(); i++) {
+            double saleAmount=calculatesalesAmount(entry[i]);
+            System.out.println(entry[i].productID+"\t\t"+saleAmount);
+        }
+    }
+    public void sortBysalesAmount(){
+        for (int i = 0; i < listSize()-1; i++) {
+            for (int j = i+1; j < listSize(); j++) {
+                if (calculatesalesAmount(entry[i])<calculatesalesAmount(entry[j])) {
+                    Product temp=entry[i];
+                    entry[i]=entry[j];
+                    entry[j]=temp;
+                }
+            }
+        }
+    }
 }
